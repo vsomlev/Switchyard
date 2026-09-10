@@ -28,7 +28,10 @@ supported apps.
 
 ## Build from source
 
-Needs the Xcode Command Line Tools (`xcode-select --install`).
+Needs the Xcode Command Line Tools (`xcode-select --install`) to compile the code.
+The app icon (`switchyard-v1.icon`, an Icon Composer bundle) is compiled with `actool`
+from **Xcode 26+**; `build.sh` finds the newest Xcode automatically. Without Xcode the
+build still succeeds — just without the custom icon.
 
 ```bash
 ./build.sh        # -> build/Switchyard.app
