@@ -7,7 +7,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 APP_NAME="Switchyard"
-ICON_SRC="switchyard-v1.icon"
+ICON_SRC="Resources/switchyard-v1.icon"
 ICON_NAME="switchyard-v1"     # base name -> switchyard-v1.icns + CFBundleIconName
 BUILD_DIR="build"
 APP="${BUILD_DIR}/${APP_NAME}.app"
