@@ -13,7 +13,7 @@
           "value" : "normal"
         }
       ],
-      "blur-material" : null,
+      "blur-material" : 0.5,
       "layers" : [
         {
           "fill-specializations" : [
@@ -27,20 +27,20 @@
               }
             }
           ],
-          "image-name" : "share 2.png",
-          "name" : "share 2",
+          "image-name" : "icon-shape.png",
+          "name" : "icon-shape",
           "position" : {
-            "scale" : 1,
+            "scale" : 0.9,
             "translation-in-points" : [
-              10.5,
-              42.5
+              1.1368683772161603e-13,
+              30
             ]
           }
         }
       ],
       "lighting" : "individual",
       "shadow" : {
-        "kind" : "neutral",
+        "kind" : "layer-color",
         "opacity" : 0.5
       },
       "specular" : true,
@@ -51,9 +51,8 @@
     }
   ],
   "supported-platforms" : {
-    "circles" : [
-      "watchOS"
-    ],
-    "squares" : "shared"
+    "squares" : [
+      "macOS"
+    ]
   }
 }

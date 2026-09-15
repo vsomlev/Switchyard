@@ -1,6 +1,4 @@
 #!/bin/bash
-# Build Switchyard.app and package it for distribution (GitHub Releases).
-# Produces dist/Switchyard.dmg (drag-to-Applications) and dist/Switchyard.zip.
 set -euo pipefail
 
 cd "$(dirname "$0")"

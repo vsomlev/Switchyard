@@ -17,9 +17,9 @@
     <key>CFBundleExecutable</key>
     <string>Switchyard</string>
     <key>CFBundleIconName</key>
-    <string>switchyard-v1</string>
+    <string>switchyard</string>
     <key>CFBundleIconFile</key>
-    <string>switchyard-v1</string>
+    <string>switchyard</string>
     <key>LSMinimumSystemVersion</key>
     <string>13.0</string>
     <key>LSUIElement</key>

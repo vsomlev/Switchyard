@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/icon.png" width="160" alt="Switchyard app icon">
+</p>
+
 # Switchyard
 
 A macOS Finder toolbar button that opens the **current folder** in the app you pick —
@@ -12,7 +16,7 @@ VS Code, a terminal, an IDE, whatever you configure. Inspired by the Linux app
 
 1. Download `Switchyard.dmg` from the [latest release](../../releases/latest).
 2. Open it and drag **Switchyard** to **Applications**.
-3. It's not notarized, so clear the quarantine flag once:
+3. It's not signed, so clear the quarantine flag once:
    ```bash
    xattr -dr com.apple.quarantine /Applications/Switchyard.app
    ```
@@ -28,10 +32,8 @@ supported apps.
 
 ## Build from source
 
+Built with Xcode 27; needs Xcode 16 or newer for the project format. 
 Needs the Xcode Command Line Tools (`xcode-select --install`) to compile the code.
-The app icon (`switchyard-v1.icon`, an Icon Composer bundle) is compiled with `actool`
-from **Xcode 26+**; `build.sh` finds the newest Xcode automatically. Without Xcode the
-build still succeeds — just without the custom icon.
 
 ```bash
 ./build.sh        # -> build/Switchyard.app
@@ -40,4 +42,4 @@ build still succeeds — just without the custom icon.
 
 ## License
 
-MIT
+[MIT](LICENSE). Do what you like with it.

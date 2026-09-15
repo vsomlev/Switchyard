@@ -1,14 +1,11 @@
 #!/bin/bash
-# Build Switchyard.app from Sources/main.swift using swiftc (no Xcode project needed).
-# The app icon is an Icon Composer bundle (switchyard-v1.icon) compiled with actool,
-# which ships inside Xcode (26+). swiftc itself works with the Command Line Tools.
 set -euo pipefail
 
 cd "$(dirname "$0")"
 
 APP_NAME="Switchyard"
-ICON_SRC="Resources/switchyard-v1.icon"
-ICON_NAME="switchyard-v1"     # base name -> switchyard-v1.icns + CFBundleIconName
+ICON_SRC="Resources/icon/switchyard.icon"
+ICON_NAME="switchyard"     # base name -> switchyard.icns + CFBundleIconName
 BUILD_DIR="build"
 APP="${BUILD_DIR}/${APP_NAME}.app"
 MACOS_DIR="${APP}/Contents/MacOS"
@@ -58,6 +55,12 @@ if [ -d "${ICON_SRC}" ]; then
             --output-partial-info-plist "${BUILD_DIR}/icon-partial.plist" \
             --errors --warnings >/dev/null 2>&1; then
         echo "    icon compiled with ${ACTOOL}"
+        # Keep the README icon (docs/icon.png) in sync with the .icon source.
+        if [ -f "${RES_DIR}/${ICON_NAME}.icns" ] && [ -d docs ]; then
+            sips -s format png -Z 512 "${RES_DIR}/${ICON_NAME}.icns" \
+                --out docs/icon.png >/dev/null 2>&1 \
+                && echo "    docs/icon.png regenerated (512px)"
+        fi
     else
         echo "    WARNING: could not compile the icon — building without a custom one."
         echo "             Needs Xcode 26+ (actool). Older actool may crash on newer .icon files."
