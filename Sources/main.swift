@@ -141,6 +141,11 @@ enum SupportedApps {
         AppEntry(name: "WezTerm", bundleId: "com.github.wez.wezterm",
                  command: "open -na WezTerm --args start --cwd {dir}"),
         AppEntry(name: "Warp", bundleId: "dev.warp.Warp-Stable"),
+
+        // Git clients
+        // GitHub Desktop opens a folder as a repository via a plain LaunchServices
+        // open (equivalent to `open -a "GitHub Desktop" <dir>`), so no command needed.
+        AppEntry(name: "GitHub Desktop", bundleId: "com.github.GitHubClient"),
     ]
 }
 
