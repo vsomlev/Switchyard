@@ -25,15 +25,24 @@
                   "display-p3:0.96783,0.62619,0.00000,1.00000"
                 ]
               }
+            },
+            {
+              "appearance" : "tinted",
+              "value" : {
+                "linear-gradient" : [
+                  "display-p3:1.00000,0.75608,0.00000,1.00000",
+                  "display-p3:0.96783,0.62619,0.00000,1.00000"
+                ]
+              }
             }
           ],
-          "image-name" : "icon-shape.png",
+          "image-name" : "icon-shape 2.png",
           "name" : "icon-shape",
           "position" : {
             "scale" : 0.9,
             "translation-in-points" : [
-              1.1368683772161603e-13,
-              30
+              0,
+              0
             ]
           }
         }
